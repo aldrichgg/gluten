@@ -77,7 +77,7 @@ export default function Home() {
             </span>
           </a>
           <Button asChild size="sm" className="hidden sm:inline-flex font-headline">
-            <a href="#comprar">Garantir Minha Vaga</a>
+            <a href="https://pay.kirvano.com/ad163a58-1717-4997-b831-b329ad1ec3f5">Garantir Minha Vaga</a>
           </Button>
         </div>
       </header>
@@ -108,7 +108,7 @@ export default function Home() {
             </p>
             <div className="mt-10">
               <Button asChild size="lg" className="text-lg font-headline">
-                <a href="#comprar">QUERO COMEÇAR AGORA</a>
+                <a href="https://pay.kirvano.com/ad163a58-1717-4997-b831-b329ad1ec3f5">QUERO COMEÇAR AGORA</a>
               </Button>
             </div>
           </div>
@@ -248,8 +248,8 @@ export default function Home() {
                     </div>
                     </div>
                     
-                    <Button size="lg" className="w-full text-lg mt-8 font-headline animate-pulse">
-                    QUERO GARANTIR MINHA VAGA
+                    <Button asChild size="lg" className="w-full text-lg mt-8 font-headline animate-pulse">
+                      <a href="https://pay.kirvano.com/ad163a58-1717-4997-b831-b329ad1ec3f5">QUERO GARANTIR MINHA VAGA</a>
                     </Button>
                     <p className="text-xs text-muted-foreground mt-2">Compra segura e acesso imediato.</p>
                 </CardContent>
@@ -505,7 +505,7 @@ export default function Home() {
                         <li><a href="#" className="text-foreground/80 hover:text-primary transition-colors">Início</a></li>
                         <li><a href="#curso" className="text-foreground/80 hover:text-primary transition-colors">O Curso</a></li>
                         <li><a href="#depoimentos" className="text-foreground/80 hover:text-primary transition-colors">Depoimentos</a></li>
-                        <li><a href="#comprar" className="text-foreground/80 hover:text-primary transition-colors">Comprar Agora</a></li>
+                        <li><a href="https://pay.kirvano.com/ad163a58-1717-4997-b831-b329ad1ec3f5" className="text-foreground/80 hover:text-primary transition-colors">Comprar Agora</a></li>
                     </ul>
                 </div>
 
