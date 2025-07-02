@@ -22,6 +22,7 @@ import {
   Sparkles,
   Star,
   UserCheck,
+  Wheat,
   XCircle,
   Youtube,
 } from 'lucide-react';
@@ -67,11 +68,17 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur-sm">
-        <div className="container mx-auto flex h-16 items-center justify-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-xl font-bold font-headline text-primary">
-            Gluten-Free Bread Bliss
-          </h1>
+      <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur-sm">
+        <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+          <a href="#" className="flex items-center gap-2" aria-label="Página Inicial do Gluten-Free Bread Bliss">
+            <Wheat className="h-6 w-6 text-primary" />
+            <span className="text-lg sm:text-xl font-bold font-headline text-primary">
+              Gluten-Free Bread Bliss
+            </span>
+          </a>
+          <Button asChild size="sm" className="hidden sm:inline-flex font-headline">
+            <a href="#comprar">Garantir Minha Vaga</a>
+          </Button>
         </div>
       </header>
 
