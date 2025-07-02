@@ -11,17 +11,19 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   CheckCircle,
   ChefHat,
+  Facebook,
   Gift,
   Heart,
+  Instagram,
   Quote,
   ShieldCheck,
   Sparkles,
   Star,
   UserCheck,
   XCircle,
+  Youtube,
 } from 'lucide-react';
 import { GlutenFreeIcon } from '@/components/icons';
-import { AIImprover } from '@/components/ai-improver';
 
 export default function Home() {
   return (
@@ -395,30 +397,34 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* AI Improver Section */}
-        <section className="py-16 sm:py-24 bg-secondary/50">
-           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-             <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto">
-                <AccordionItem value="ai-improver">
-                  <AccordionTrigger className="font-headline text-2xl text-center block hover:no-underline">
-                    <div className="flex items-center justify-center gap-2">
-                       <Sparkles className="text-primary" />
-                      <span>Área do Administrador: Otimizar Página com IA</span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="pt-4">
-                    <AIImprover />
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-           </div>
-        </section>
-
       </main>
-      <footer className="bg-background border-t">
-        <div className="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-sm text-foreground/60 font-body">
-          <p>&copy; {new Date().getFullYear()} Gluten-Free Bread Bliss. Todos os direitos reservados.</p>
+      <footer className="bg-secondary/30 border-t border-border/50">
+        <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center text-center">
+            <h2 className="text-2xl font-bold font-headline text-primary">
+              Gluten-Free Bread Bliss
+            </h2>
+            <p className="mt-2 max-w-md text-foreground/80 font-body">
+              Transformando sua relação com a cozinha sem glúten.
+            </p>
+            <div className="mt-6 flex justify-center space-x-6">
+              <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
+                <span className="sr-only">Instagram</span>
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
+                <span className="sr-only">Facebook</span>
+                <Facebook className="h-6 w-6" />
+              </a>
+              <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
+                <span className="sr-only">Youtube</span>
+                <Youtube className="h-6 w-6" />
+              </a>
+            </div>
+          </div>
+          <div className="mt-8 border-t border-border/50 pt-8 text-center text-sm text-foreground/60 font-body">
+            <p>&copy; {new Date().getFullYear()} Gluten-Free Bread Bliss. Todos os direitos reservados.</p>
+          </div>
         </div>
       </footer>
     </div>
