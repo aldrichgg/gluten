@@ -145,9 +145,9 @@ export default function Home() {
               </div>
               <div className="flex justify-center">
                 <Image
-                  src="https://placehold.co/500x350.png"
-                  alt="Frustrated baker"
-                  data-ai-hint="kitchen mess"
+                  src="https://i.imgur.com/GgP4g5c.png"
+                  alt="Frustrated baker with failed bread"
+                  data-ai-hint="failed baking"
                   width={500}
                   height={350}
                   className="rounded-lg shadow-xl"
