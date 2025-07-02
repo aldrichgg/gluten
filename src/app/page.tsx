@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image';
 import {
   Accordion,
@@ -25,8 +27,44 @@ import {
 } from 'lucide-react';
 import { GlutenFreeIcon } from '@/components/icons';
 import { Separator } from '@/components/ui/separator';
+import { useState, useEffect } from 'react';
+import { SalesPopup } from '@/components/sales-popup';
 
 export default function Home() {
+  const [popup, setPopup] = useState<{ name: string; location: string; key: number } | null>(null);
+
+  const names = ["Ana Clara", "Maria Eduarda", "Juliana", "Camila", "Fernanda", "Beatriz", "Luana", "Mariana", "Ricardo", "Larissa", "Paula", "Carlos", "Isabela", "Sofia", "Laura"];
+  const locations = ["São Paulo, SP", "Rio de Janeiro, RJ", "Belo Horizonte, MG", "Curitiba, PR", "Porto Alegre, RS", "Salvador, BA", "Fortaleza, CE", "Recife, PE", "Brasília, DF", "Manaus, AM"];
+
+  useEffect(() => {
+    let timeouts: NodeJS.Timeout[] = [];
+  
+    const loop = () => {
+      const delay = Math.random() * (15000 - 8000) + 8000; // 8-15 seconds
+      const timeoutId = setTimeout(() => {
+        const name = names[Math.floor(Math.random() * names.length)];
+        const location = locations[Math.floor(Math.random() * locations.length)];
+        setPopup({ name, location, key: Date.now() });
+  
+        const hideTimeoutId = setTimeout(() => {
+          setPopup(null);
+        }, 7000); // Show for 7 seconds
+        timeouts.push(hideTimeoutId);
+  
+        loop();
+      }, delay);
+      timeouts.push(timeoutId);
+    }
+  
+    const initialTimeout = setTimeout(loop, 6000);
+    timeouts.push(initialTimeout);
+    
+    return () => {
+      timeouts.forEach(clearTimeout);
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen">
       <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur-sm">
@@ -452,6 +490,14 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      {popup && (
+        <SalesPopup
+          key={popup.key}
+          name={popup.name}
+          location={popup.location}
+          onClose={() => setPopup(null)}
+        />
+      )}
     </div>
   );
 }
