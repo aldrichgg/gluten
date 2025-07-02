@@ -13,6 +13,7 @@ import {
   ChefHat,
   Gift,
   Heart,
+  Quote,
   ShieldCheck,
   Sparkles,
   Star,
@@ -48,19 +49,17 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
           </div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-            <h2 className="text-4xl font-bold tracking-tight font-headline sm:text-5xl lg:text-6xl">
-              Aprenda a Fazer Pães Sem Glúten Deliciosos, Macios e Fáceis
+            <Badge variant="secondary" className="text-base sm:text-lg font-medium bg-primary/10 text-primary border-primary/20">
+                Curso 100% Online e Prático
+            </Badge>
+            <h2 className="mt-4 text-4xl font-bold tracking-tight font-headline sm:text-5xl lg:text-6xl max-w-4xl mx-auto">
+                A Arte de Fazer <span className="text-primary">Pão Sem Glúten</span>
             </h2>
-            <h3 className="mt-4 text-5xl font-bold tracking-tight font-headline sm:text-6xl lg:text-7xl text-primary">
-              Mesmo Que Você Nunca Tenha Cozinhado Antes!
-            </h3>
-            <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-foreground/80 font-body">
-              Receitas simples, ingredientes acessíveis e zero complicação —
-              descubra como transformar sua cozinha com pães que respeitam sua
-              saúde e seu paladar.
+            <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-foreground/80 font-body sm:text-xl">
+                Sabor, maciez e praticidade na sua cozinha. Descubra o método passo a passo para criar pães deliciosos, do zero, mesmo que você nunca tenha cozinhado antes.
             </p>
             <div className="mt-10">
-              <Button size="lg" className="text-lg">
+              <Button size="lg" className="text-lg font-headline">
                 QUERO COMEÇAR AGORA
               </Button>
             </div>
@@ -68,7 +67,7 @@ export default function Home() {
         </section>
 
         {/* Block 02: Social Proof */}
-        <section className="py-16 sm:py-24">
+        <section className="py-16 sm:py-24 bg-secondary/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-3xl font-bold tracking-tight font-headline sm:text-4xl">
@@ -79,67 +78,76 @@ export default function Home() {
               </p>
             </div>
             <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-              <Card>
-                <CardHeader className="items-center text-center">
-                  <Image
-                    src="https://placehold.co/100x100.png"
-                    alt="Juliana R."
-                    data-ai-hint="happy person"
-                    width={80}
-                    height={80}
-                    className="rounded-full"
-                  />
-                  <CardTitle className="font-headline text-xl">Juliana R.</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center font-body">
-                  <p className="italic">“Finalmente fiz um pão que minha filha amou!”</p>
-                  <div className="flex justify-center mt-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
-                    ))}
+              <Card className="transform hover:scale-105 transition-transform duration-300">
+                <CardContent className="pt-6 relative">
+                  <Quote className="absolute top-6 right-6 h-12 w-12 text-primary/10" />
+                  <div className="flex items-center mb-4">
+                    <Image
+                      src="https://placehold.co/100x100.png"
+                      alt="Juliana R."
+                      data-ai-hint="happy person"
+                      width={64}
+                      height={64}
+                      className="rounded-full"
+                    />
+                    <div className="ml-4">
+                      <p className="font-headline text-xl font-semibold">Juliana R.</p>
+                      <div className="flex mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
                   </div>
+                  <p className="italic text-foreground/80 font-body text-left">“Finalmente fiz um pão que minha filha amou! A textura ficou incrível e ela nem percebeu que era sem glúten. Esse curso salvou nossos cafés da manhã.”</p>
                 </CardContent>
               </Card>
-              <Card>
-                <CardHeader className="items-center text-center">
-                  <Image
-                    src="https://placehold.co/100x100.png"
-                    alt="Fernando S."
-                    data-ai-hint="happy person"
-                    width={80}
-                    height={80}
-                    className="rounded-full"
-                  />
-                  <CardTitle className="font-headline text-xl">Fernando S.</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center font-body">
-                  <p className="italic">“Sou celíaco e hoje faço meus próprios pães toda semana.”</p>
-                  <div className="flex justify-center mt-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
-                    ))}
+              <Card className="transform hover:scale-105 transition-transform duration-300">
+                <CardContent className="pt-6 relative">
+                  <Quote className="absolute top-6 right-6 h-12 w-12 text-primary/10" />
+                  <div className="flex items-center mb-4">
+                    <Image
+                      src="https://placehold.co/100x100.png"
+                      alt="Fernando S."
+                      data-ai-hint="happy person"
+                      width={64}
+                      height={64}
+                      className="rounded-full"
+                    />
+                    <div className="ml-4">
+                      <p className="font-headline text-xl font-semibold">Fernando S.</p>
+                      <div className="flex mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
                   </div>
+                  <p className="italic text-foreground/80 font-body text-left">“Sou celíaco há anos e sempre sofri com pães caros e ruins. As receitas do curso são fáceis e o resultado é impressionante. Hoje faço meus próprios pães toda semana.”</p>
                 </CardContent>
               </Card>
-              <Card>
-                <CardHeader className="items-center text-center">
-                  <Image
-                    src="https://placehold.co/100x100.png"
-                    alt="Ana M."
-                    data-ai-hint="happy person"
-                    width={80}
-                    height={80}
-                    className="rounded-full"
-                  />
-                  <CardTitle className="font-headline text-xl">Ana M.</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center font-body">
-                  <p className="italic">“Economizei horrores parando de comprar pão industrializado sem glúten.”</p>
-                   <div className="flex justify-center mt-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
-                    ))}
+              <Card className="transform hover:scale-105 transition-transform duration-300">
+                <CardContent className="pt-6 relative">
+                  <Quote className="absolute top-6 right-6 h-12 w-12 text-primary/10" />
+                  <div className="flex items-center mb-4">
+                    <Image
+                      src="https://placehold.co/100x100.png"
+                      alt="Ana M."
+                      data-ai-hint="happy person"
+                      width={64}
+                      height={64}
+                      className="rounded-full"
+                    />
+                    <div className="ml-4">
+                      <p className="font-headline text-xl font-semibold">Ana M.</p>
+                      <div className="flex mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
                   </div>
+                  <p className="italic text-foreground/80 font-body text-left">“O curso é muito didático! Além de economizar horrores, descobri um novo hobby. A qualidade do que a gente come não tem preço. Recomendo demais!”</p>
                 </CardContent>
               </Card>
             </div>
@@ -147,7 +155,7 @@ export default function Home() {
         </section>
 
         {/* Block 03: Pain & Identification */}
-        <section className="bg-secondary/50 py-16 sm:py-24">
+        <section className="bg-background py-16 sm:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
