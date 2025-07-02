@@ -415,12 +415,12 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="flex justify-center">
                  <Image
-                  src="https://i.imgur.com/uV6g4g9.png"
+                  src="https://images.unsplash.com/photo-1612884610549-ce221d92514a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiYWtlcnxlbnwwfHx8fDE3NTE0NzgyODh8MA&ixlib=rb-4.1.0&q=80&w=1080"
                   alt="Happy person baking"
                   data-ai-hint="happy baker"
                   width={400}
                   height={400}
-                  className="rounded-lg shadow-xl"
+                  className="rounded-lg shadow-xl object-cover"
                 />
               </div>
               <div>
