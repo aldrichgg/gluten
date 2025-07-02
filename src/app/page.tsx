@@ -24,6 +24,7 @@ import {
   Youtube,
 } from 'lucide-react';
 import { GlutenFreeIcon } from '@/components/icons';
+import { Separator } from '@/components/ui/separator';
 
 export default function Home() {
   return (
@@ -61,8 +62,8 @@ export default function Home() {
                 Sabor, maciez e praticidade na sua cozinha. Descubra o método passo a passo para criar pães deliciosos, do zero, mesmo que você nunca tenha cozinhado antes.
             </p>
             <div className="mt-10">
-              <Button size="lg" className="text-lg font-headline">
-                QUERO COMEÇAR AGORA
+              <Button asChild size="lg" className="text-lg font-headline">
+                <a href="#comprar">QUERO COMEÇAR AGORA</a>
               </Button>
             </div>
           </div>
@@ -359,43 +360,78 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Block 08 & 09: Pricing & Final CTA */}
-        <section className="relative py-20 sm:py-32">
-          <div className="absolute inset-0">
-             <Image
-              src="https://placehold.co/1200x800.png"
-              alt="Loaf of bread"
-              data-ai-hint="loaf bread"
-              layout="fill"
-              objectFit="cover"
-              className="opacity-10"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
-          </div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-            <Card className="max-w-md mx-auto p-8 shadow-2xl">
-              <CardHeader>
-                <CardTitle className="font-headline text-2xl">Valor Promocional</CardTitle>
-                <p className="font-body text-foreground/70">Acesso vitalício + Todas as atualizações futuras incluídas</p>
-              </CardHeader>
-              <CardContent>
-                <p className="text-2xl font-body">De <span className="line-through">R$14,97</span> por apenas</p>
-                <p className="text-7xl font-bold font-headline text-primary my-2">R$9,90</p>
-                 <Button size="lg" className="w-full text-lg mt-6">
-                   QUERO APRENDER AGORA
-                  </Button>
-              </CardContent>
-            </Card>
-            
-            <div className="mt-16">
-              <h2 className="text-3xl font-bold tracking-tight font-headline sm:text-4xl">
-                Transforme sua alimentação e descubra o prazer de fazer pães incríveis!
-              </h2>
-              <p className="mt-4 font-body text-lg text-foreground/80">
-                🚀 Comece agora sua jornada!
-              </p>
+        {/* Block 08: Pricing & Final CTA */}
+        <section id="comprar" className="relative py-20 sm:py-32">
+            <div className="absolute inset-0">
+                <Image
+                src="https://placehold.co/1200x800.png"
+                alt="Loaf of bread"
+                data-ai-hint="loaf bread"
+                layout="fill"
+                objectFit="cover"
+                className="opacity-10"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
             </div>
-          </div>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+                <Card className="max-w-lg mx-auto p-6 sm:p-8 shadow-2xl bg-card/95 backdrop-blur-sm">
+                <CardHeader className="p-0 text-center">
+                    <Badge variant="secondary" className="text-sm font-medium bg-primary/10 text-primary border-primary/20 w-fit mx-auto">
+                    OFERTA ESPECIAL DE LANÇAMENTO
+                    </Badge>
+                    <CardTitle className="font-headline text-3xl sm:text-4xl mt-2">
+                    Acesso Completo e Vitalício
+                    </CardTitle>
+                </CardHeader>
+                <CardContent className="p-0 mt-6">
+                    <div className="text-center my-4">
+                        <p className="text-xl font-body text-foreground/70">De <span className="line-through">R$14,97</span> por apenas</p>
+                        <p className="text-5xl sm:text-6xl font-bold font-headline text-primary my-2">R$9,90</p>
+                        <p className="font-body text-foreground/80">Pagamento único, sem mensalidades</p>
+                    </div>
+
+                    <Separator className="my-6 bg-border/50" />
+
+                    <div className="space-y-4 text-left">
+                    <h3 className="text-lg font-headline font-semibold text-center mb-4">O que você recebe:</h3>
+                    <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <p className="font-body text-foreground/90">Acesso <span className="font-bold">vitalício</span> a todas as aulas do curso.</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <p className="font-body text-foreground/90">Apostila completa e <span className="font-bold">receituário em PDF</span> para download.</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <p className="font-body text-foreground/90">Todos os <span className="font-bold">bônus exclusivos</span> já inclusos.</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <p className="font-body text-foreground/90">Acesso a <span className="font-bold">todas as futuras atualizações</span> do curso, sem custo adicional.</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <p className="font-body text-foreground/90">Suporte para tirar dúvidas diretamente na plataforma.</p>
+                    </div>
+                    </div>
+                    
+                    <Button size="lg" className="w-full text-lg mt-8 font-headline animate-pulse">
+                    QUERO GARANTIR MINHA VAGA
+                    </Button>
+                    <p className="text-xs text-muted-foreground mt-2">Compra segura e acesso imediato.</p>
+                </CardContent>
+                </Card>
+                
+                <div className="mt-16">
+                    <h2 className="text-3xl font-bold tracking-tight font-headline sm:text-4xl">
+                        Tudo pronto para transformar sua cozinha?
+                    </h2>
+                    <p className="mt-4 font-body text-lg text-foreground/80 max-w-2xl mx-auto">
+                        Clique no botão acima e comece hoje mesmo a fazer pães sem glúten que vão surpreender a todos. Sua jornada para uma vida mais saborosa e saudável começa agora!
+                    </p>
+                </div>
+            </div>
         </section>
       </main>
       <footer className="bg-secondary/30 border-t border-border/50">
