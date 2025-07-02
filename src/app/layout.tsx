@@ -3,10 +3,10 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Gluten-Free Bread Bliss',
-  description: 'Aprenda a Fazer Pães Sem Glúten Deliciosos, Macios e Fáceis — Mesmo Que Você Nunca Tenha Cozinhado Antes!',
-  keywords: 'pão sem glúten, curso online, receitas sem glúten, celíacos, alimentação saudável',
-};
+  title: 'Descomplicando Pães Sem Glúten – Curso Online para Pães Leves, Fofinhos e Saudáveis',
+  description: 'Descubra como fazer pães sem glúten que realmente funcionam: macios, saborosos e simples de preparar, mesmo se você nunca cozinhou antes. Ideal para celíacos e quem busca uma alimentação mais saudável.',
+  keywords: 'pão sem glúten, curso de pão sem glúten, receitas sem glúten, alimentação saudável, pães para celíacos, pão caseiro sem glúten, curso online de pães'
+}
 
 export default function RootLayout({
   children,
