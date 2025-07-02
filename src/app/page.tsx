@@ -145,7 +145,7 @@ export default function Home() {
               </div>
               <div className="flex justify-center">
                 <Image
-                  src="https://i.imgur.com/GgP4g5c.png"
+                  src="https://images.unsplash.com/photo-1532635224-cf024e66d122?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxiYWtlcnxlbnwwfHx8fDE3NTE0NzgyODh8MA&ixlib=rb-4.1.0&q=80&w=1080"
                   alt="Frustrated baker with failed bread"
                   data-ai-hint="failed baking"
                   width={500}
