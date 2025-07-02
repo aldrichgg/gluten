@@ -415,12 +415,12 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="flex justify-center">
                  <Image
-                  src="https://placehold.co/500x500.png"
+                  src="https://i.imgur.com/uV6g4g9.png"
                   alt="Happy person baking"
-                  data-ai-hint="baking ingredients"
+                  data-ai-hint="happy baker"
                   width={400}
                   height={400}
-                  className="rounded-full shadow-xl"
+                  className="rounded-lg shadow-xl"
                 />
               </div>
               <div>
