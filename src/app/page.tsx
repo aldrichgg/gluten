@@ -307,7 +307,7 @@ export default function Home() {
                   <Quote className="absolute top-6 right-6 h-12 w-12 text-primary/10" />
                   <div className="flex items-center mb-4">
                     <Image
-                      src="https://placehold.co/100x100.png"
+                      src="https://images.unsplash.com/photo-1628619487925-e9b8fc4c6b08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8WW91bmclMjBNZW58ZW58MHx8fHwxNzUxNDc5NjM0fDA&ixlib=rb-4.1.0&q=80&w=1080"
                       alt="Fernando S."
                       data-ai-hint="happy person"
                       width={64}
