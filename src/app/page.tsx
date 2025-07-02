@@ -67,7 +67,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-background">
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur-sm">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
           <a href="#" className="flex items-center gap-2" aria-label="Página Inicial do Gluten-Free Bread Bliss">
@@ -267,7 +267,7 @@ export default function Home() {
         </section>
         
         {/* Block 02: Social Proof */}
-        <section className="py-16 sm:py-24 bg-background">
+        <section id="depoimentos" className="py-16 sm:py-24 bg-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-3xl font-bold tracking-tight font-headline sm:text-4xl">
@@ -355,7 +355,7 @@ export default function Home() {
         </section>
 
         {/* Block 05: Course Content */}
-        <section className="bg-secondary/50 py-16 sm:py-24">
+        <section id="curso" className="bg-secondary/50 py-16 sm:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight font-headline sm:text-4xl">
@@ -451,7 +451,7 @@ export default function Home() {
         </section>
 
         {/* Block 07: Guarantee */}
-        <section className="bg-secondary/50 py-16 sm:py-24">
+        <section id="garantia" className="bg-secondary/50 py-16 sm:py-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
               <ShieldCheck className="h-16 w-16 text-primary mx-auto" />
@@ -468,33 +468,81 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="bg-secondary/30 border-t border-border/50">
-        <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center text-center">
-            <h2 className="text-2xl font-bold font-headline text-primary">
-              Gluten-Free Bread Bliss
-            </h2>
-            <p className="mt-2 max-w-md text-foreground/80 font-body">
-              Transformando sua relação com a cozinha sem glúten.
-            </p>
-            <div className="mt-6 flex justify-center space-x-6">
-              <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
-                <span className="sr-only">Instagram</span>
-                <Instagram className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
-                <span className="sr-only">Facebook</span>
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
-                <span className="sr-only">Youtube</span>
-                <Youtube className="h-6 w-6" />
-              </a>
+      <footer className="bg-background border-t border-border/50">
+        <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 gap-8 text-center sm:grid-cols-2 sm:text-left lg:grid-cols-4">
+                {/* Column 1: Brand & Social */}
+                <div className="flex flex-col items-center sm:items-start">
+                    <a href="#" className="flex items-center gap-2 mb-4" aria-label="Página Inicial do Gluten-Free Bread Bliss">
+                        <Wheat className="h-8 w-8 text-primary" />
+                        <span className="text-xl font-bold font-headline text-primary">
+                            Gluten-Free Bread Bliss
+                        </span>
+                    </a>
+                    <p className="text-foreground/80 font-body max-w-xs">
+                        Receitas deliciosas e práticas para você dominar a arte da panificação sem glúten.
+                    </p>
+                    <div className="mt-6 flex space-x-4">
+                        <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
+                            <span className="sr-only">Instagram</span>
+                            <Instagram className="h-6 w-6" />
+                        </a>
+                        <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
+                            <span className="sr-only">Facebook</span>
+                            <Facebook className="h-6 w-6" />
+                        </a>
+                        <a href="#" className="text-foreground/60 hover:text-primary transition-colors">
+                            <span className="sr-only">Youtube</span>
+                            <Youtube className="h-6 w-6" />
+                        </a>
+                    </div>
+                </div>
+
+                {/* Column 2: Navigation */}
+                <div className="flex flex-col items-center sm:items-start">
+                    <h3 className="font-headline font-semibold text-foreground">Navegação</h3>
+                    <ul className="mt-4 space-y-2 font-body">
+                        <li><a href="#" className="text-foreground/80 hover:text-primary transition-colors">Início</a></li>
+                        <li><a href="#curso" className="text-foreground/80 hover:text-primary transition-colors">O Curso</a></li>
+                        <li><a href="#depoimentos" className="text-foreground/80 hover:text-primary transition-colors">Depoimentos</a></li>
+                        <li><a href="#comprar" className="text-foreground/80 hover:text-primary transition-colors">Comprar Agora</a></li>
+                    </ul>
+                </div>
+
+                {/* Column 3: Legal */}
+                <div className="flex flex-col items-center sm:items-start">
+                    <h3 className="font-headline font-semibold text-foreground">Legal</h3>
+                    <ul className="mt-4 space-y-2 font-body">
+                        <li><a href="#" className="text-foreground/80 hover:text-primary transition-colors">Política de Privacidade</a></li>
+                        <li><a href="#" className="text-foreground/80 hover:text-primary transition-colors">Termos de Serviço</a></li>
+                        <li><a href="#garantia" className="text-foreground/80 hover:text-primary transition-colors">Nossa Garantia</a></li>
+                    </ul>
+                </div>
+                
+                {/* Column 4: Contact */}
+                <div className="flex flex-col items-center sm:items-start">
+                    <h3 className="font-headline font-semibold text-foreground">Fale Conosco</h3>
+                    <p className="mt-4 text-foreground/80 font-body">Precisa de ajuda? Envie um e-mail para:</p>
+                    <a href="mailto:contato@glutenfreebliss.com" className="font-body text-primary hover:underline">contato@glutenfreebliss.com</a>
+                </div>
             </div>
-          </div>
-          <div className="mt-8 border-t border-border/50 pt-8 text-center text-sm text-foreground/60 font-body">
-            <p>&copy; {new Date().getFullYear()} Gluten-Free Bread Bliss. Todos os direitos reservados.</p>
-          </div>
+
+            <Separator className="my-8 bg-border/50" />
+
+            <div className="flex flex-col-reverse items-center gap-4 text-center sm:flex-row sm:justify-between">
+                <p className="text-sm text-foreground/60 font-body">
+                    &copy; {new Date().getFullYear()} Gluten-Free Bread Bliss. Todos os direitos reservados.
+                </p>
+                <div className="flex items-center gap-2">
+                    <ShieldCheck className="h-5 w-5 text-green-600"/>
+                    <p className="text-sm text-foreground/60 font-body">Pagamento 100% Seguro</p>
+                </div>
+            </div>
+
+            <div className="mt-8 border-t border-border/50 pt-8 text-center text-xs text-foreground/50 font-body">
+                <p>Gluten-Free Bread Bliss | CNPJ: 12.345.678/0001-90 | Todos os direitos reservados.</p>
+                <p className="mt-2">Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais. Não vendemos o seu e-mail ou qualquer informação para terceiros. Jamais fazemos qualquer tipo de spam. Se você tiver alguma dúvida, sinta-se à vontade para usar o link de contato e falar conosco em horário comercial de Segunda a Sextas das 09h00 às 18h00. Lemos e respondemos todas as mensagens por ordem de chegada.</p>
+            </div>
         </div>
       </footer>
       {popup && (
