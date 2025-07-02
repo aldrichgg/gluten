@@ -73,7 +73,7 @@ export default function Home() {
           <a href="#" className="flex items-center gap-2" aria-label="Página Inicial do Gluten-Free Bread Bliss">
             <Wheat className="h-6 w-6 text-primary" />
             <span className="text-lg sm:text-xl font-bold font-headline text-primary">
-              Gluten-Free Bread Bliss
+            Descomplicando Pães Sem Glúten
             </span>
           </a>
           <Button asChild size="sm" className="hidden sm:inline-flex font-headline">
@@ -217,8 +217,8 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="p-0 mt-6">
                     <div className="text-center my-4">
-                        <p className="text-xl font-body text-foreground/70">De <span className="line-through">R$14,97</span> por apenas</p>
-                        <p className="text-5xl sm:text-6xl font-bold font-headline text-primary my-2">R$9,90</p>
+                        <p className="text-xl font-body text-foreground/70">De <span className="line-through">R$30,97</span> por apenas</p>
+                        <p className="text-5xl sm:text-6xl font-bold font-headline text-primary my-2">R$19,90</p>
                         <p className="font-body text-foreground/80">Pagamento único, sem mensalidades</p>
                     </div>
 
@@ -462,7 +462,7 @@ export default function Home() {
                 Você tem 7 dias para testar o curso. Se por qualquer motivo não gostar, basta enviar um e-mail e nós devolvemos 100% do valor investido. Sem burocracia, sem perguntas. O risco é todo nosso!
               </p>
               <p className="mt-6 font-body text-sm text-foreground/70">
-                💳 Pagamento 100% seguro via For4Payments.
+                💳 Pagamento 100% seguro via Kirvano.
               </p>
             </div>
           </div>
@@ -476,7 +476,7 @@ export default function Home() {
                     <a href="#" className="flex items-center gap-2 mb-4" aria-label="Página Inicial do Gluten-Free Bread Bliss">
                         <Wheat className="h-8 w-8 text-primary" />
                         <span className="text-xl font-bold font-headline text-primary">
-                            Gluten-Free Bread Bliss
+                        Descomplicando Pães Sem Glúten
                         </span>
                     </a>
                     <p className="text-foreground/80 font-body max-w-xs">
@@ -531,7 +531,7 @@ export default function Home() {
 
             <div className="flex flex-col-reverse items-center gap-4 text-center sm:flex-row sm:justify-between">
                 <p className="text-sm text-foreground/60 font-body">
-                    &copy; {new Date().getFullYear()} Gluten-Free Bread Bliss. Todos os direitos reservados.
+                    &copy; {new Date().getFullYear()} Descomplicando Pães Sem Glúten. Todos os direitos reservados.
                 </p>
                 <div className="flex items-center gap-2">
                     <ShieldCheck className="h-5 w-5 text-green-600"/>
@@ -540,7 +540,7 @@ export default function Home() {
             </div>
 
             <div className="mt-8 border-t border-border/50 pt-8 text-center text-xs text-foreground/50 font-body">
-                <p>Gluten-Free Bread Bliss | CNPJ: 12.345.678/0001-90 | Todos os direitos reservados.</p>
+                <p>Descomplicando Pães Sem Glúten | CNPJ: 50.195.991/0001-83 | Todos os direitos reservados.</p>
                 <p className="mt-2">Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais. Não vendemos o seu e-mail ou qualquer informação para terceiros. Jamais fazemos qualquer tipo de spam. Se você tiver alguma dúvida, sinta-se à vontade para usar o link de contato e falar conosco em horário comercial de Segunda a Sextas das 09h00 às 18h00. Lemos e respondemos todas as mensagens por ordem de chegada.</p>
             </div>
         </div>
